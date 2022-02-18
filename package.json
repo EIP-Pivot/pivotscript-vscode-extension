@@ -1,0 +1,25 @@
+{
+    "name": "pivotsense",
+    "displayName": "PivotSense",
+    "description": "This provides autocompletion, definition and other language features for .pvt files, using the PivotScript language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pivotscript",
+            "aliases": ["PivotScript", "pivotscript"],
+            "extensions": [".pvt",".pivotscript",".pivot"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pivotscript",
+            "scopeName": "source.pvt",
+            "path": "./syntaxes/pivotscript.tmLanguage.json"
+        }]
+    }
+}

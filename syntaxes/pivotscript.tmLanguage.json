@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PivotScript",
+	"fileTypes": [".pvt", ".pivot", ".pivotscript"],
+	"colors" : {
+		"editor.background": "#A3F34F"
+	},
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#function-calls"
+		},
+		{
+			"include": "#double-strings"
+		},
+		{
+			"include": "#single-strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{	"name": "keyword.operator.pivotscript",
+					"match": "\\b(if|while|for)\\b" },
+				{	"name": "support.type.pivotscript",
+					"match": "\\b(component|system|entity)\\b" },
+				{	"name": "keyword.types.pivotscript",
+					"match": "\\b(Vector3|Color|Number|String|Boolean)\\b" }
+			]
+		},
+		"double-strings": {
+			"name": "string.quoted.double.pivotscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pivotscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"single-strings": {
+			"name": "string.quoted.single.pivotscript",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pivotscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.pivotscript",
+			"begin": "#",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pivotscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"function-calls": {
+			"patterns": [
+				{
+					"name": "entity.name.function.pivotscript",
+					"match": "(?!\\bif\\b|\\bfor\\b|\\bwhile\\b|\\btry\\b|\\bcatch\\b)(\\b[\\w]+\\b)[\\s\\n\\r]*(?=\\(.*\\))"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pvt"
+}
