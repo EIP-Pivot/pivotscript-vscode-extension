@@ -10,16 +10,27 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "pivotscript",
-            "aliases": ["PivotScript", "pivotscript"],
-            "extensions": [".pvt",".pivotscript",".pivot"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "pivotscript",
-            "scopeName": "source.pvt",
-            "path": "./syntaxes/pivotscript.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "pivotscript",
+                "aliases": [
+                    "PivotScript",
+                    "pivotscript"
+                ],
+                "extensions": [
+                    ".pvt",
+                    ".pivotscript",
+                    ".pivot"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "pivotscript",
+                "scopeName": "source.pvt",
+                "path": "./syntaxes/pivotscript.tmLanguage.json"
+            }
+        ]
     }
 }
